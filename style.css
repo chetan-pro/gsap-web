@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+  stroke-dashoffset: 1000px;
+  stroke-dasharray: 1000px;
+  
+}
+.animate{
+  animation: anima 10s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+#circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 1.3px solid white;
+  border-radius: 50%;
+  z-index: 100;
+  pointer-events: none;
+}
+#background {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+  -webkit-background-clip: text;
+  background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper h1 {
+  -webkit-text-fill-color: transparent;
+  font-size: 550px;
+  font-family: integral cf;
+}
+#whitestrip {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0%, 0%);
+  width: 45%;
+  height: 140px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#blackcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, -50%);
+  width: 230px;
+  height: 330px;
+  color: white;
+  background-color: black;
+}
+#blackcard p {
+  font-family: "PlayFair Display";
+}
+#linelem{
+    display: flex;
+    align-items: center;
+}
+#linelem h4{
+  font-family: "PlayFair Display";
+  font-size: 13px;
+}
+#linelem #line{
+    width: 200px;
+    height: 2px;
+    margin: 0px 30px;
+    background-color: black;
+}
+#linelem i{
+  cursor: pointer;
+}
+#background h5{
+  position: absolute;
+  top: 58%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 15px;
+  transform: rotate(-90deg);
+  font-size: 8px;
+  font-family: lato;
+}
+
+@keyframes anima{
+  to{
+    stroke-dasharray: 450px;
+  }
+}
